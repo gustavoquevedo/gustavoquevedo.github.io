@@ -1,18 +1,42 @@
----
-layout: default
----
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html  lang="en" class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Gustavo Quevedo : : : Professional website</title>
+        <meta name="viewport" content="width=device-width">
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
-
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
-</div>
+        <meta content="Gustavo, Quevedo, Garr&aacute;n, CV, curriculum, resume, programmer, development, developer, engineer, NET, framework, C, VB, Sharepoint, software, applications, computers" name="keywords"/>
+        <meta content="Professional profile of Gustavo Quevedo, Web Consultant at Incentro (Santander, Spain). Computer engineer and Software architect, designer and developer." name="description"/>
+        <meta content="Dise&ntilde;o, www.gustavoquevedo.com" name="author"/>
+        <meta content="http://www.gustavoquevedo.com" name="Identifier" scheme="URI"/>
+        <meta content="http://www.gustavoquevedo.com" name="publisher"/>
+        <meta content="Gustavo Quevedo Garr&aacute;n" name="creator"/>
+        <meta content="Espa&ntilde;a" name="Coverage.jurisdiction"/>
+        <meta content="Espa&ntilde;a, programador, software, inform&aacute;tica" name="page-topic"/>
+        <meta content="All" name="audience"/>
+        <meta content="General" name="Rating"/>
+        <meta content="Global" name="Distribution"/>
+        <meta content="Document" name="ObjectType"/>
+        <meta content="index follow" name="googlebot"/>
+        <meta content="index,follow,all" name="robots"/>
+        <meta content="7 Days" name="revisit-after"/>
+        <meta content="7 days" name="revisit"/>
+		<script src="js/jquery-1.8.2.js"></script>
+		<script src="js/jquery.browserLanguage.js"></script>
+	</head>
+	<body>
+		<script>
+		    $.browserLanguage(function( language , acceptHeader ){
+		    	var relativeUrl = "en/index.html";
+			    if(acceptHeader.substring(0,2) == "es"){
+			    	relativeUrl = "es/index.html";
+			    }
+		    	window.location = relativeUrl;
+		    });
+		</script>
+	</body>
+</html>

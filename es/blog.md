@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: /en/blog.html
 ---
 
 <div>

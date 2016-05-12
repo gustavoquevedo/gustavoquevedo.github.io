@@ -1,27 +1,46 @@
 ---
-layout: default
+layout: default_es
 permalink: /es/blog
 ---
 
 <div>
-  <ul>
-  {% for post in site.posts %}
-  <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-  {% endfor %}
-  </ul>
+
 </div>
 
 <div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
 </div>
+
+<div class="main wrapper clearfix div-article-big-aside"> 
+	<article>                      
+	  {% for post in site.posts %}
+		<article class="post">
+
+		  <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+
+		  <div class="entry">
+			{{ post.excerpt }}
+		  </div>
+
+		  <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+		</article>
+	  {% endfor %}
+	</article>
+	<aside id="main-aside">
+		<div id="current-info" class="menu" title="Posts">
+		  <ul>
+		  {% for post in site.posts %}
+		  <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+		  {% endfor %}
+		  </ul>
+		</div>
+		<div class="menu" title="Descargas">
+			<ul>
+				<li><a href="../docs/GQG[Esp-CV].pdf"><span class="pdf-doc-icon">[Espa&ntilde;ol] CV PDF</span></a></li>
+				<li><a href="../docs/GQG[Esp-CV].doc"><span class="word-doc-icon">[Espa&ntilde;ol] CV Word</span></a></li>
+				<li><a href="../docs/GQG[Eng-CV].pdf"><span class="pdf-doc-icon">[Ingl&eacute;s] CV PDF</span></a></li>
+				<li><a href="../docs/GQG[Eng-CV].doc"><span class="word-doc-icon">[Ingl&eacute;s] CV Word</span></a></li>
+			</ul>
+		</div>
+	</aside>
+</div> <!-- #main -->

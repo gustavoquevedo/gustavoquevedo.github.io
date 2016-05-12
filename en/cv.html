@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Gustavo Quevedo Garr&aacute;n : : : CV</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="../css/normalize.min.css">
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/custom-theme/jquery-ui-1.9.0.custom.css">
+        <link rel="stylesheet" href="../css/author.css">
+
+        <script src="../js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+        <script src="../js/jquery-1.8.2.js"></script>
+        <script src="../js/jquery-ui-1.9.0.accordion.js"></script>
+
+        <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+
+        <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Exo:700' rel='stylesheet' type='text/css'>        
+        <link href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700|Droid+Sans:400,700" rel="stylesheet" type="text/css">
+
+        <script type="text/javascript">
+            $(function() {        
+                $( ".accordion" ).accordion({ 
+                    collapsible: true, 
+                    active: false,
+                    heightStyle: "content"  ,
+                    header: ".accordion-header"
+                }); 
+            }); 
+
+            function checkSeparators() {
+                var width = $(window).width();
+                $(".separator").each(function(){
+                    var separator = $(this);
+                    var separatorHtml = undefined; 
+                    var span = separator.parent(); 
+                    if (width <= 480) {
+                        separatorHtml = "<br />";
+                    }
+                    else {
+                        var separatorText = separator.data("separator");
+                        separatorHtml = ((separatorText != null) ? separatorText : "");
+                    }                     
+                    separator.html(separatorHtml);
+
+                    if(span.hasClass("when")){
+                        var whenSpan = span;
+                        var rowWhenWidth = undefined;
+                        if(whenSpan.hasClass("year-month")){
+                            if (width <= 480) {
+                                rowWhenWidth = "25%";
+                            }
+                            else {   
+                                rowWhenWidth = "30%";
+                            }
+                        }
+                        else if(whenSpan.hasClass("year")){
+                            rowWhenWidth = "17%";
+                        }
+                        whenSpan.css("min-width", rowWhenWidth);
+
+                        var from = whenSpan.find(".from");
+                        var to = whenSpan.find(".to");
+
+                        if (width <= 480) {
+                            whenSpan.append(to).append(separator).append(from);
+                            whenSpan.find("strong").css("float", "left");
+                            whenSpan.find("strong").css("width", "32");
+                        }
+                        else {
+                            whenSpan.append(from).append(separator).append(to);
+                            whenSpan.find("strong").css("float", "none");
+                            whenSpan.find("strong").css("width", "auto");
+                        }
+                    }
+                    else {
+                        var prev = separator.prev();
+                        var next = separator.next();
+                        if (width <= 480) {
+                            prev.css("float", "none");
+                            next.css("float", "none");
+                        }
+                        else if(next.hasClass("right-detail")){
+                            next.css("float", "right");                            
+                        }
+                        span.append(prev).append(separator).append(next);
+                    }
+                });            
+            };
+            $(document).ready(checkSeparators);
+            $(window).resize(checkSeparators);
+
+            $(function() { 
+                $( ".show-hide-nav" ).click(function() {
+                     $("nav#main-nav a").css("display", "inline");
+                     $(".show-hide-nav").css("display", "none");
+                 });
+            });
+        </script>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-36792204-2', 'auto');
+          ga('send', 'pageview');
+
+        </script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+
+        <div class="header-container">
+            <header class="wrapper clearfix">
+                <div id="logo-container">
+                    <a href="index.html" class="logo">
+                        <span id="myname">gustavo</span>
+                        <span id="mysurname">quevedo</span>
+                        <span class="dotcom">.com</span>
+                    </a>
+                    <ul id="language-selector">
+                        <li>
+                            <a href="../es/cv.html">
+                                <img src="../img/icons/es_flag.png" title="Versi&oacute;n en Espa&ntilde;ol">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../en/cv.html">
+                                <img src="../img/icons/uk_flag.png" title="English version">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <nav id="main-nav">
+                    <ul>
+                        <li><a class="show-hide-nav"><span class="main-nav-link cv-icon">Browsing</span></a></li>
+                        <li><a href="index.html"><span class="main-nav-link home-icon">Home</span></a></li>
+                        <li><a href="news.html"><span class="main-nav-link news-icon">News</span></a></li>
+                        <li><a href="skills.html"><span class="main-nav-link skills-icon">Skills</span></a></li>
+                        <li><a class="selected" href="cv.html"><span class="main-nav-link cv-icon">C. V.</span></a></li>
+                        <li><a href="contact.html"><span class="main-nav-link contact-icon">Contact</span></a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+        <div class="main-container">
+            <div class="main wrapper clearfix div-article-small-aside"> 
+                <article>  
+                    <h1 class="article-image cv-icon">Curriculum Vitae</h1>                       
+                    <div id="div_experiencia_profesional" class="accordion">
+                        <h2>Work history</h2>
+                        <section>
+                            <h3 class="accordion-header">
+                                <span class="when year-month">
+                                    <span class="from"><strong>2014</strong> JAN</span>
+                                    <span class="separator" data-separator="- "></span>
+                                    <span class="to"><strong>Present</strong></span>     
+                                </span>        
+                                <span class="what">Web App Developer</span>
+                                <span class="separator" data-separator="- "></span>
+                                <span class="where">[Strata 3], Dublin</span>
+                                <img title="Geo3" class="accordion-header-icon right-detail" src="../img/cv/companies/strata3_mini.gif" />
+                            </h3>
+                            <div class="inner">                            
+                                <div class="inner-left">
+                                    <h3>Senior .Net/Java Web Application Developer</h3>
+                                    <h4>Tasks description</h4>
+                                    <ul>
+                                        <li>Responsible for .NET and JAVA Web applications backend development and maintenance</li>
+                                        <li>Developed Web Forms, Client/Server validation, CMS integration, Database and Web Services in/out processes for all KBC bank products</li>
+                                        <li>Handled support tasks for different clients, projects, platforms and technologies</li>
+                                        <li>Performed time estimates, Content Management System and Server configurations</li>                                        
+                                    </ul>
+                                </div> 
+                                <aside>
+                                    <div class="mid-menu" title="Details"> 
+                                        <ul>
+                                            <li><a href="http://www.strata3.com" target="_new"><span class="link-icon">Strata3 </span></a></li>
+                                            <li><a href="http://www.kbc.ie" target="_new"><span class="link-icon">KBC</span></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mid-menu expandible" title="Technologies">
+                                        <a href="http://en.wikipedia.org/wiki/ASP.NET" class="tech-level-1" target="_new">ASP.NET</a>
+                                        <a href="http://en.wikipedia.org/wiki/C_Sharp_(programming_language)" class="tech-level-1" target="_new">C#</a>
+                                        <a href="http://en.wikipedia.org/wiki/Internet_Information_Services" class="tech-level-4" target="_new">IIS</a>
+                                        <a href="http://en.wikipedia.org/wiki/JavaScript" class="tech-level-2" target="_new">Javascript</a>
+                                        <a href="http://en.wikipedia.org/wiki/JQuery" class="tech-level-2" target="_new">JQuery</a>
+                                        <a href="http://en.wikipedia.org/wiki/JavaServer_Pages" class="tech-level-2" target="_new">JSP</a>
+                                        <a href="http://en.wikipedia.org/wiki/Kentico_CMS" class="tech-level-2" target="_new">Kentico</a>
+                                        <a href="http://en.wikipedia.org/wiki/ASP.NET_MVC_Framework" class="tech-level-4" target="_new">MVC</a>
+                                        <a href="http://en.wikipedia.org/wiki/SQL_Server" class="tech-level-2" target="_new">SQL Server</a>
+                                        <a href="http://en.wikipedia.org/wiki/Apache_Subversion" class="tech-level-4" target="_new">Subversion</a>
+                                        <a href="http://en.wikipedia.org/wiki/Apache_Tomcat" class="tech-level-4" target="_new">Tomcat</a>
+                                        <a href="http://en.wikipedia.org/wiki/Visual_Basic_.NET" class="tech-level-3" target="_new">VB.NET</a>
+                                    </div>
+                                </aside>
+                            </div>
+                        </section>
+                        <section>
+                            <h3 class="accordion-header">
+                                <span class="when year-month">
+                                    <span class="from"><strong>2013</strong> MAR</span>
+                                    <span class="separator" data-separator="- "></span>
+                                    <span class="to"><strong>2013</strong> DEC</span>     
+                                </span>                       
+                                <span class="what"><abbr title="Content Management System">CMS</abbr> Consultant</span>
+                                <span class="separator" data-separator = "- "></span>
+                                <span class="where">[Incentro], Santander</span>
+                                <img title="Incentro Spain" class="accordion-header-icon right-detail" src="../img/cv/companies/incentro_mini.gif" />
+                            </h3>
+                            <div class="inner">
+                                <div class="inner-left">
+                                    <h3>Web Content Management Consultant / Developer</h3>
+                                    <p>Responsible for Web applications maintenance for customers located in the Netherlands such as:
+                                        <ul>
+                                            <li><a href="http://www.postnl.nl" target="_new">PostNL</a></li>
+                                            <li><a href="http://www.wpg.nl" target="_new">WPG</a></li>
+                                            <li><a href="http://www.sligro.nl" target="_new">Sligro</a></li>
+                                            <li><a href="http://www.dnvkema.com" target="_new">Kema</a></li>
+                                            <li><a href="http://www.tencate.com" target="_new">Ten Cate</a></li>
+                                        </ul>
+                                    </p>
+                                    <h4>Tasks description</h4>
+                                    <ul>
+                                        <li>Designed technical solutions and calculated time estimates for new components</li>
+                                        <li>Developed solutions for Web Content Management Systems such as Tridion and GX</li>
+                                        <li>Communicated with Dutch customers in English to resolve their issues and concerns</li>
+                                    </ul>
+                                </div>
+                                <aside>
+                                        <div class="mid-menu" title="Details"> 
+                                            <ul>               
+                                                <li><a href="http://www.incentro.com" target="_new">Incentro</a></li>        
+                                            <ul>
+                                        </div>
+                                        <div class="mid-menu expandible" title="Technologies">  
+                                            <a href="http://en.wikipedia.org/wiki/ASP.NET" class="tech-level-3" target="_new">ASP.NET</a>
+                                            <a href="http://en.wikipedia.org/wiki/CSS" class="tech-level-2" target="_new">CSS</a>
+                                            <a href="http://en.wikipedia.org/wiki/Eclipse_(software)" class="tech-level-3" target="_new">Eclipse</a>
+                                            <a href="http://en.wikipedia.org/wiki/Git_(software)" class="tech-level-4" target="_new">GIT</a>
+                                            <a href="http://www.gxsoftware.com/index.htm" class="tech-level-2" target="_new">GX</a>
+                                            <a href="http://en.wikipedia.org/wiki/HTML" class="tech-level-3" target="_new">HTML</a>
+                                            <a href="http://en.wikipedia.org/wiki/Java_(programming_language)" class="tech-level-3" target="_new">Java</a>
+                                            <a href="http://en.wikipedia.org/wiki/JavaScript" class="tech-level-2" target="_new">Javascript</a>
+                                            <a href="http://en.wikipedia.org/wiki/JQuery" class="tech-level-2" target="_new">JQuery</a>
+                                            <a href="http://en.wikipedia.org/wiki/ASP.NET_MVC_Framework" class="tech-level-4" target="_new">MVC</a>
+                                            <a href="http://en.wikipedia.org/wiki/.NET_Framework" class="tech-level-2" target="_new">.NET Framework</a>
+                                            <a href="http://en.wikipedia.org/wiki/Microsoft_SQL_Server" class="tech-level-3" target="_new">SQL Server 2008</a>
+                                            <a href="http://en.wikipedia.org/wiki/Apache_Subversion" class="tech-level-3" target="_new">Subversion</a>
+                                            <a href="http://www.sdl.com/products/tridion" class="tech-level-2" target="_new">Tridion</a>
+                                            <a href="http://en.wikipedia.org/wiki/VMware" class="tech-level-2" target="_new">VMWare</a>
+                                            <a href="http://en.wikipedia.org/wiki/XSLT" class="tech-level-3" target="_new">XSLT</a>
+                                        </div>
+                                </aside>
+                            </div>
+                        </section>
+                        <section>
+                            <h3 class="accordion-header">
+                                <span class="when year-month">
+                                    <span class="from"><strong>2013</strong> JAN</span>
+                                    <span class="separator" data-separator="- "></span>
+                                    <span class="to"><strong>2013</strong> MAR</span>     
+                                </span>        
+                                <span class="what">Web Developer</span>
+                                <span class="separator" data-separator="- "></span>
+                                <span class="where">[Freelance]</span>
+                                <img title="Geo3" class="accordion-header-icon right-detail" src="../img/cv/companies/geo3_mini.gif" />
+                            </h3>
+                            <div class="inner">                            
+                                <div class="inner-left">
+                                    <h3>Freelance Web manager and developer</h3>
+                                    <h4>Tasks description</h4>
+                                    <ul>
+                                        <li>Designed, developed and managed the sites <a href="http://www.geo-3.es" target="_new">Geo3</a> (commercial), <a href="http://www.gustavoquevedo.com" target="_new">gustavoquevedo.com</a> (personal)</li>
+                                        <li>Responsible for other involved tasks such as:
+                                            <ul>
+                                                <li>purchased and configured the domain</li>
+                                                <li>chose a free host provider</li>
+                                                <li>improved SEO</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div> 
+                                <aside>
+                                    <div class="mid-menu" title="Details"> 
+                                        <ul>
+                                            <li><a href="http://www.geo-3.es" target="_new"><span class="link-icon">Geo3</span></a></li>
+                                            <li><a href="http://www.gustavoquevedo.com" target="_new"><span class="link-icon">My website</span></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mid-menu expandible" title="Technologies">
+                                        <a href="http://en.wikipedia.org/wiki/Cascading_Style_Sheets" class="tech-level-1" target="_new">CSS3</a>
+                                        <a href="http://en.wikipedia.org/wiki/Domain_Name_System" class="tech-level-4" target="_new">DNS</a>
+                                        <a href="http://en.wikipedia.org/wiki/HTML5" class="tech-level-1" target="_new">HTML5</a>
+                                        <a href="http://en.wikipedia.org/wiki/JavaScript" class="tech-level-4" target="_new">JavaScript</a>
+                                        <a href="http://en.wikipedia.org/wiki/JQuery" class="tech-level-3" target="_new">JQuery</a>
+                                        <a href="http://en.wikipedia.org/wiki/PHP" class="tech-level-5" target="_new">PHP</a>
+                                    </div>
+                                </aside>
+                            </div>
+                        </section>
+                        <section>
+                            <h3 class="accordion-header">
+                                <span class="when year-month">
+                                    <span class="from"><strong>2010</strong> JUN</span>
+                                    <span class="separator" data-separator="- "></span>
+                                    <span class="to"><strong>2012</strong> DEC</span>     
+                                </span>                       
+                                <span class="what">C# Developer</span>
+                                <span class="separator" data-separator = "- "></span>
+                                <span class="where">[Semicrol], Santander</span>
+                                <img title="Semicrol S. L." class="accordion-header-icon right-detail" src="../img/cv/companies/semicrol_mini.gif" />
+                            </h3>
+                            <div class="inner">
+                                <div class="inner-left">
+                                    <h3>Development of <a href="http://www.fundanet.es" target="_new">Fund@net</a> application</h3>
+                                    <p>
+                                        Fund@net is an <abbr title="Enterpise Resource Planning">ERP</abbr> oriented to the management of foundations and other organizations.
+                                    </p>                                
+                                    <h4>Tasks description</h4>
+                                    <ul>
+                                        <li>Responsible for the development of <a href="http://www.fundanet.es/es/Paginas/FundanetCEIC.aspx" target="_new">EECC-CEIC Modules</a></li>
+                                        <li>Handled the tasks of updating, repairing, modifying and expanding existing ERP application used in dozens of foundations</li>
+                                        <li>Designed database changes and developed programming modifications</li>
+                                        <li>Performed the tasks of data migration to MS-SQL Server databases from other engines</li>
+                                        <li>Responsible for the managing and improving of several Sharepoint sites</li>
+                                    </ul>
+                                </div>
+                                <aside>
+                                        <div class="mid-menu" title="Details"> 
+                                            <ul>               
+                                                <li><a href="http://www.semicrol.es" target="_new">Semicrol S. L.</a></li>
+                                                <ul>
+                                        </div>
+                                        <div class="mid-menu expandible" title="Technologies">  
+                                            <a href="http://en.wikipedia.org/wiki/ADO.NET" class="tech-level-1" target="_new">ADO.NET</a>
+                                            <a href="http://en.wikipedia.org/wiki/ASP.NET" class="tech-level-3" target="_new">ASP.NET</a>
+                                            <a href="http://en.wikipedia.org/wiki/C_Sharp_(programming_language)" class="tech-level-1" target="_new">C#</a>
+                                            <a href="http://msdn.microsoft.com/library/office/aa192495(v=office.90).aspx" class="tech-level-5" target="_new">Interop Word</a>
+                                            <a href="http://en.wikipedia.org/wiki/JavaScript" class="tech-level-4" target="_new">Javascript</a>
+                                            <a href="http://en.wikipedia.org/wiki/JQuery" class="tech-level-4" target="_new">JQuery</a>
+                                            <a href="http://en.wikipedia.org/wiki/Microsoft_Office_SharePoint_Portal_Server" class="tech-level-3" target="_new">MOSS</a>
+                                            <a href="http://en.wikipedia.org/wiki/Microsoft_SharePoint" class="tech-level-3" target="_new">SharePoint</a>
+                                            <a href="http://en.wikipedia.org/wiki/Microsoft_SQL_Server" class="tech-level-1" target="_new">SQL Server 2008</a>
+                                            <a href="http://en.wikipedia.org/wiki/T-SQL" class="tech-level-1" target="_new">T-SQL</a>
+                                            <a href="http://en.wikipedia.org/wiki/Team_Foundation_Server" class="tech-level-1" target="_new">TFS</a>
+                                            <a href="http://en.wikipedia.org/wiki/Microsoft_Visual_Studio" class="tech-level-1" target="_new">Visual Studio</a>
+                                            <a href="http://en.wikipedia.org/wiki/Windows_Forms" class="tech-level-2" target="_new">WinForms</a>
+                                        </div>
+                                </aside>
+                            </div>
+                        </section>
+                        <section>
+                            <h3 class="accordion-header">
+                                <span class="when year-month">
+                                    <span class="from"><strong>2008</strong> JAN</span>
+                                    <span class="separator" data-separator="- "></span>
+                                    <span class="to"><strong>2010</strong> JUN</span>     
+                                </span>         
+                                <span class="what"><abbr title="Visual Basic .NET">VB.NET</abbr> Developer</span>
+                                <span class="separator" data-separator = "- "></span>
+                                <span class="where">[RPTec], Oviedo</span>
+                                <img title="Recusos y Proyectos T&eacute;cnicos S. L." class="accordion-header-icon right-detail" src="../img/cv/companies/rptec_mini.gif" />                                
+                            </h3>
+                            <div class="inner">
+                                <div class="inner-left">
+                                    <h3>Development of <a href="http://www.plandelabores.es" target="_new">Plan de Labores Digital</a> application</h3>
+                                    <p>
+                                        Application for managing mining projects.
+                                    </p>
+                                    <h4>Tasks description</h4>
+                                    <ul>
+                                        <li>Responsible for the creation of an application for managing mining projects by using <abbr title="Visual Basic .NET">VB.Net</abbr></li>
+                                        <li>Designed, developed, implemented, tested and documented the whole application</li>
+                                        <li>Responsible for taking care of enhancement and fixing the bugs reported by the users</li>
+                                    </ul>
+                                    <h3>Development of a small application using Android</h3>
+                                    <p>Designed and implemented a small Android application by using Java and Eclipse</p>
+                                </div>
+                                <aside>
+                                    <div class="mid-menu" title="Details">
+                                        <ul>
+                                            <li><a href="http://www.rptec.es" target="_new">RPTec S. L.</a></li>
+                                        
+                                            <li><a href="http://www.plandelabores.es/" target="_new">Plan de Labores Digital</a></li>
+                                        </ul>  
+                                    </div>
+                                    <div class="mid-menu expandible" title="Technologies"> 
+                                        <a href="http://en.wikipedia.org/wiki/ADO.NET" class="tech-level-2" target="_new">ADO.NET</a> 
+                                        <a href="http://en.wikipedia.org/wiki/Android_(operating_system)" class="tech-level-4" target="_new">Android</a>
+                                        <a href="http://en.wikipedia.org/wiki/ClickOnce" class="tech-level-3" target="_new">ClickOnce</a>
+                                        <a href="http://en.wikipedia.org/wiki/Eclipse_(software)" class="tech-level-4" target="_new">Eclipse</a>
+                                        <a href="http://en.wikipedia.org/wiki/Java_(programming_language)" class="tech-level-4" target="_new">Java</a>
+                                        <a href="http://msdn.microsoft.com/en-gb/library/ms251671(v=vs.90).aspx" class="tech-level-3" target="_new">MS Reports</a>
+                                        <a href="http://en.wikipedia.org/wiki/Visual_Basic_.NET" class="tech-level-1" target="_new">VB.NET</a>
+                                        <a href="http://en.wikipedia.org/wiki/Visual_Basic" class="tech-level-5" target="_new">Visual Basic</a>
+                                        <a href="http://en.wikipedia.org/wiki/Microsoft_Visual_Studio" class="tech-level-1" target="_new">Visual Studio 2008</a>
+                                        <a href="http://en.wikipedia.org/wiki/Windows_Forms" class="tech-level-1" target="_new">WinForms</a>
+                                    </div>
+                                </aside>
+                            </div>
+                        </section>
+                        <section>
+                            <h3 class="accordion-header">
+                                <span class="when year-month">
+                                    <span class="from"><strong>2007</strong> JUN</span>
+                                    <span class="separator" data-separator="- "></span>
+                                    <span class="to"><strong>2007</strong> DEC</span>     
+                                </span>        
+                                <span class="what"><abbr title="Java 2 Enterprise Edition">J2EE</abbr> Developer</span>
+                                <span class="separator" data-separator="- "></span>
+                                <span class="where">[Killer Ideas], Oviedo</span>
+                                <img title="Killer Ideas S. L." class="accordion-header-icon right-detail" src="../img/cv/companies/killer_mini.gif" />     
+                            </h3>
+                            <div class="inner">
+                                <div class="inner-left">
+                                    <h3>Development of a comprehensive solution for <a href="http://www.fruela.es" target="_new">Fruela Driving School</a></h3>
+                                    <p>
+                                        Worked in a team of 5 member developers to create a comprehensive solution for a driving school.
+                                    </p>         
+                                    <h4>Tasks description</h4>
+                                    <ul>
+                                        <li>Responsible for the coding of a project in programming language Java EE</li>
+                                        <li>Designed application components and created UML documentation</li>
+                                        <li>Performed unit testing by JUnit and application testing</li>
+                                    </ul>
+                                </div>                                                         
+                                <aside>
+                                    <div class="mid-menu" title="Details"> 
+                                        <ul>
+                                            <li>Killer Ideas S. L.</li>
+                                            <li><a href="http://www.fruela.es" target="_new">Fruela Driving School</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mid-menu expandible" title="Technologies">  
+                                        <a href="http://en.wikipedia.org/wiki/Concurrent_Versions_System" class="tech-level-4" target="_new">CVS</a>
+                                        <a href="http://en.wikipedia.org/wiki/Eclipse_(software)" class="tech-level-1" target="_new">Eclipse</a>
+                                        <a href="http://en.wikipedia.org/wiki/Java_(programming_language)" class="tech-level-1" target="_new">Java</a>
+                                        <a href="http://en.wikipedia.org/wiki/Java_Platform,_Enterprise_Edition" class="tech-level-1" target="_new">J2EE</a>
+                                        <a href="http://en.wikipedia.org/wiki/JBoss" class="tech-level-5" target="_new">JBoss</a>
+                                        <a href="http://en.wikipedia.org/wiki/JUnit" class="tech-level-3" target="_new">JUnit</a>
+                                        <a href="http://en.wikipedia.org/wiki/PostgreSQL" class="tech-level-4" target="_new">PostgreSQL</a>
+                                        <a href="http://en.wikipedia.org/wiki/Swing_(Java)" class="tech-level-2" target="_new">Swing</a>
+                                        <a href="http://en.wikipedia.org/wiki/Unified_Modeling_Language" class="tech-level-2" target="_new">UML</a>
+                                    </div>
+                                </aside>
+                            </div>
+                        </section>                        
+                        <section>
+                            <h3 class="accordion-header">
+                                <span class="when year-month">
+                                    <span class="from"><strong>2007</strong> JAN</span>
+                                    <span class="separator" data-separator="- "></span>
+                                    <span class="to"><strong>2007</strong> DEC</span>     
+                                </span>          
+                                <span class="what">IT Internship</span>
+                                <span class="separator" data-separator = "- "></span>
+                                <span class="where">[University of Oviedo]</span>
+                                <img title="Universidad of Oviedo" class="accordion-header-icon right-detail" src="../img/cv/companies/uniovi_mini.gif" />
+                            </h3>
+                            <div class="inner">
+                                <div class="inner-left">
+                                    <h3>IT Support Internship</h3>
+                                    <h4>Responsible for all computer equipment at the Teacher-Training College</h4>
+                                    <p>Responsible for training and guiding the teachers and students</p>
+                                    <ul>
+                                        <li>Handled the responsibilities of installing and upgrading hardware and software tools</li>
+                                        <li>Monitoring network performance, protecting network data, management and optimization</li>
+                                        <li>Responsible for the school website maintenance</li>
+                                    </ul>
+                                </div>                                          
+                                <aside>
+                                    <div class="mid-menu" title="Details"> 
+                                        <ul>
+                                            <li><a href="http://www.uniovi.es" target="_new">Universidad of Oviedo</a></li><li><a href="http://156.35.33.125/formacionProfesorado/index.html" target="_new">Teacher-Training College</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mid-menu expandible" title="Technologies">  
+                                        <a href="http://en.wikipedia.org/wiki/Microsoft_Access" class="tech-level-3" target="_new">Access</a>
+                                        <a href="http://en.wikipedia.org/wiki/Active_Directory" class="tech-level-4" target="_new">Active Directory</a>
+                                        <a href="http://en.wikipedia.org/wiki/CSS" class="tech-level-3" target="_new">CSS</a>
+                                        <a href="http://en.wikipedia.org/wiki/Computer_network" class="tech-level-2" target="_new">Networking</a>
+                                        <a href="http://en.wikipedia.org/wiki/Windows_Server_2003" class="tech-level-3" target="_new">Windows Server 2003</a>
+                                        <a href="http://en.wikipedia.org/wiki/XHTML" class="tech-level-2" target="_new">XHTML</a>
+                                    </div>
+                                </aside>
+                            </div>
+                        </section>
+                        <section>
+                            <h3 class="accordion-header">
+                                <span class="when year-month">
+                                    <span class="from"><strong>2002</strong> MAR</span>
+                                    <span class="separator" data-separator="- "></span>
+                                    <span class="to"><strong>2002</strong> JUN</span>     
+                                </span>        
+                                <span class="what"><abbr title="Visual Basic 6">VB6</abbr> Developer</span>
+                                <span class="separator" data-separator="- "></span>
+                                <span class="where">[ABMicros], Torrelavega</span>
+                                <img title="ABMicros Internet" class="accordion-header-icon right-detail" src="../img/cv/companies/abmicros_mini.gif" />
+                            </h3>
+                            <div class="inner">                            
+                                <div class="inner-left">
+                                    <h3>Application developer and hardware technician</h3>
+                                    <h4>Tasks description</h4>
+                                    <ul>
+                                        <li>Designed, developed and implemented a desktop application for a water company using Visual Basic 6.0</li>
+                                        <li>Responsible for installing and repairing various computers, printers and networks</li>
+                                    </ul>
+                                </div> 
+                                <aside>
+                                    <div class="mid-menu" title="Details"> 
+                                        <ul>
+                                            <li><a href="http://www.abmicros.es" target="_new">AB Micros Internet</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mid-menu expandible" title="Technologies">  
+                                        <a href="http://en.wikipedia.org/wiki/Microsoft_Access" class="tech-level-3" target="_new">Access</a>
+                                        <a href="http://en.wikipedia.org/wiki/Personal_computer_hardware" class="tech-level-2" target="_new">Hardware</a>
+                                        <a href="http://en.wikipedia.org/wiki/Computer_network" class="tech-level-4" target="_new">Networking</a>
+                                        <a href="http://en.wikipedia.org/wiki/SQL" class="tech-level-2" target="_new">SQL</a>
+                                        <a href="http://en.wikipedia.org/wiki/Visual_Basic" class="tech-level-1" target="_new">Visual Basic</a>
+                                        <a href="http://en.wikipedia.org/wiki/Windows_98" class="tech-level-3" target="_new">Windows 98</a>
+                                    </div>
+                                </aside>
+                            </div>
+                        </section>
+                    </div>
+                    <div id="div_formacion_academica" class="accordion">
+                        <h2>Education</h2>
+                        <section>
+                            <h3 class="accordion-header">
+                                <span class="when year">
+                                    <span class="from">2012</span> 
+                                    <span class="separator" data-separator=" - "></span> 
+                                    <span class="to">2014</span>
+                                </span>
+                                <span class="what">Bachelor of <abbr title="Software">SW</abbr> Engineering</span>
+                                <span class="separator" data-separator="- "></span> 
+                                <span class="where">Universidad of Oviedo</span>
+                                <img title="Universidad of Oviedo" class="accordion-header-icon right-detail" src="../img/cv/companies/uniovi_mini.gif" />
+                            </h3>
+                            <div class="inner">
+                                <div class="inner-left">
+                                    <h3>Bachelor of Software Engineering</h3>
+                                </div>
+                                <aside>
+                                    <div class="mid-menu expandible" title="Detalles">  
+                                        <ul>
+                                            <li><a href="http://www.uniovi.es/centros/escuelas/ingenieriainformatica" target="_new">School of Computer Science Engineering</a></li>
+                                            <li><a href="http://www.uniovi.es/estudios/grados/-/asset_publisher/X5CYKURHdF1e/content/grado-en-ingenieria-informatica-del-software" target="_new">Degree in Software Computer Engineering</a></li>
+                                        </ul>                                       
+                                    </div>
+                                </aside>
+                            </div>
+                        </section>
+                        <section>
+                            <h3 class="accordion-header">
+                                <span class="when year">
+                                    <span class="from">2002</span>
+                                    <span class="separator" data-separator=" - "></span>  
+                                    <span class="to">2009</span>
+                                </span>
+                                <span class="what">I. T. Diploma</abbr></span>
+                                <span class="separator" data-separator = "- "></span>
+                                <span class="where">Universidad of Oviedo</span>
+                                <img title="Universidad of Oviedo" class="accordion-header-icon right-detail" src="../img/cv/companies/uniovi_mini.gif" />                                
+                            </h3>
+                            <div class="inner">
+                                <div class="inner-left">
+                                    <h3>Diploma in Computer Management Engineering</h3>
+                                </div>
+                                <aside>
+                                    <div class="mid-menu expandible" title="Details">  
+                                        <ul>
+                                            <li><a href="http://www.uniovi.es/centros/escuelas/ingenieriainformatica" target="_new">School of Computer Science Engineering</a></li>
+                                            <li><a href="http://directo.uniovi.es/catalogo/DetallePlan.asp?idioma=I&plan=ITINFGE1" target="_new">Diploma in Computer Management Engineering</a></li>
+                                        </ul>       
+                                    </div>
+                                </aside>
+                            </div>
+                        </section>
+                        <section>
+                            <h3 class="accordion-header">
+                                <span class="when year">
+                                    <span class="from">2000</span> 
+                                    <span class="separator" data-separator=" - "></span> 
+                                    <span class="to">2002</span>
+                                </span>
+                                <span class="what"><abbr title="Software">SW</abbr> Dev. Higher Certificate</span>
+                                <span class="separator" data-separator="- "></span> 
+                                <span class="where">Crespo Acad., Torrelavega</span>
+                                <img title="Academia Crespo" class="accordion-header-icon right-detail" src="../img/cv/companies/crespo_mini.gif" /> 
+                            </h3>
+                            <div class="inner">
+                                <div class="inner-full">
+                                    <h3>Software Developing Higher Certificate</h3>
+                                </div>
+                            </div>
+                        </section>
+                        <section>
+                            <h3 class="accordion-header">Further training</h3>                        
+                            <div class="inner">
+                                <div class="inner-full">
+                                    <ul>
+                                        <li>
+                                            <strong>Desktop applications in Web servers: Ajax</strong>
+                                            <span class="separator" data-separator=" "></span>
+                                            <span class="right-detail">40 h. - Adams 2011</span>
+                                        </li>
+                                        <li>
+                                            <strong>ASP. NET development</strong>
+                                            <span class="separator" data-separator=" "></span>
+                                            <span class="right-detail">40 h. - Adams 2011</span>
+                                        </li>
+                                        <li>
+                                            <strong>Visual C# .NET development</strong>
+                                            <span class="separator" data-separator=" "></span>
+                                            <span class="right-detail">90 h. - Semicrol S. L. 2010</span>
+                                        </li>
+                                        <li>
+                                            <strong>Web development using standards</strong>
+                                            <span class="separator" data-separator=" "></span>
+                                            <span class="right-detail">45 h. - Universidad of Oviedo, 2008</span>
+                                        </li>
+                                        <li>
+                                            <strong>Creation of video games</strong>
+                                            <span class="separator" data-separator=" "></span>
+                                            <span class="right-detail">45 h. - Universidad of Oviedo, 2005</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                    </div> <!-- #div_formacion_academica -->
+                    <div id="div_otros_datos" class="accordion">
+                        <h2>Additional information</h2>
+                        <section>
+                            <h3 class="accordion-header">Technical skills</h3>
+                            <div class="inner">
+                                <div class="inner-full">
+                                    <ul>
+                                        <li>
+                                            Extensive knowledge of .NET Framework 2.0, Visual Studio and MS-SQL, using programming languages like C#, VB.NET or T-SQL and tools such as Team Foundation Server.
+                                        </li>
+                                        <li>
+                                            Comprehensive knowledge of Object Oriented Programming and Relational Database Design.
+                                        </li>
+                                        <li>
+                                            Skilled in Sharepoint 2007, ASP.NET, Java, xHTML, CSS and Design Patterns.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                        <section>
+                            <h3 class="accordion-header">Hobbies and interest</h3>
+                            <div class="inner">
+                                <div class="inner-full">
+                                    <ul>
+                                        <li>
+                                            I like travelling, learning new technologies, socialising and meeting new people.
+                                        </li>
+                                        <li>
+                                            I also like playing sports, especially football. I’m currently playing for my previous company’s team in a regional league.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                    </div> <!-- #div_otros_datos -->   
+                    <!--</div>-->
+                    <div>
+                        <h3>Updated: November 2014</h3>
+                    </div>
+                </article>
+                <aside id="main-aside">
+                    <div class="menu" title="CV Downloads">
+                        <ul>
+                            <li><a href="../docs/GQG[Eng-CV].pdf"><span class="pdf-doc-icon">[ENG] PDF</span></a></li>
+                            <li><a href="../docs/GQG[Eng-CV].doc"><span class="word-doc-icon">[ENG] Word</span></a></li>
+                            <li><a href="../docs/GQG[Esp-CV].pdf"><span class="pdf-doc-icon">[SPA] PDF</span></a></li>
+                            <li><a href="../docs/GQG[Esp-CV].doc"><span class="word-doc-icon">[SPA] Word</span></a></li>
+                            <!--
+                                <li><a href="../docs/Europass-CV-GQG.pdf"><span class="pdf-doc-icon">EURES PDF</span></li>
+                                <li><a href="../docs/Europass-CV-GQG.doc"><span class="word-doc-icon">EURES Word</span></li>
+                            -->
+                        </ul>
+                    </div>
+                    <div class="menu" title="Links">
+                        <ul>
+                            <li><a href="http://ie.linkedin.com/in/gquevedo/" target="_new"><span class="link-icon">LinkedIn</span></a></li>
+                            <li><a href="http://www.infojobs.net/gustavo-quevedo.prf" target="_new"><span class="link-icon">Infojobs</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="menu" title="Organizations">
+                        <ul>
+                            <li><a href="http://www.strata3.com" target="_new"><span class="link-icon">Strata 3</span></a></li>
+                            <li><a href="http://www.incentro.com" target="_new"><span class="link-icon">Incentro</span></a></li>
+                            <li><a href="http://www.semicrol.es" target="_new"><span class="link-icon">Semicrol</span></a></li>
+                            <li><a href="http://www.uniovi.es" target="_new"><span class="link-icon">Univ. Oviedo</span></a></li>
+                            <li><a href="http://www.academiacrespo.com/" target="_new"><span class="link-icon">Crespo Acad.</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="menu" title="Other Projects">
+                        <ul>
+                            <li><a href="http://www.gtdoro.com" target="_new"><span class="link-icon">GTDoro</span></a></li>
+                            <li><a href="http://www.geo-3.es" target="_new"><span class="link-icon">Geo3</span></a></li>
+                            <li><a href="http://www.gustavoquevedo.com" target="_new"><span class="link-icon">My website</span></a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+
+        <div class="footer-container">
+            <footer class="wrapper">
+                <strong>Gustavo Quevedo Garr&aacute;n &copy; 2014</strong>
+                <ul id="footer-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a class="selected" href="cv.html">C. V.</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </footer>
+        </div>
+
+        <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>-->
+        <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
+
+        <script src="../js/plugins.js"></script>
+        <script src="../js/main.js"></script>
+
+    </body>
+</html>

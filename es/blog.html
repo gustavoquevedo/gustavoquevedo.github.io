@@ -21,13 +21,13 @@ permalink: /es/blog
 	  
 			<section class="news">                        
 				<div class="news-date">
-					<span class="news-date-weekday">{{ page.date | date: "%A" }}</span>
-					<span class="news-date-day">{{ page.date | date: "%-d" }}</span>
-					<span class="news-date-month">{{ page.date | date: "%b" }}</span>
-					<span class="news-date-year">{{ page.date | date: "%Y" }}</span>
+					<span class="news-date-weekday">{{ post.date | date: "%A" }}</span>
+					<span class="news-date-day">{{ post.date | date: "%-d" }}</span>
+					<span class="news-date-month">{{ post.date | date: "%b" }}</span>
+					<span class="news-date-year">{{ post.date | date: "%Y" }}</span>
 				</div>
 				<div class="news-content">
-					<div class="news-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>/div>
+					<div class="news-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
 					<p>{{ post.excerpt }}</p>
 					<a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
 				</div>

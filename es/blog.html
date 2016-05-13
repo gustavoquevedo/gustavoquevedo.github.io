@@ -11,19 +11,32 @@ permalink: /es/blog
 
 </div>
 
-<div class="main wrapper clearfix div-article-big-aside"> 
-	<article>                      
+<!--<div class="main wrapper clearfix div-article-big-aside"> -->
+<div class="main wrapper clearfix"> 
+	<article>  
+		<h1 class="article-image news-icon">Blog</h1>      
+		<h2>&Uacute;ltimos posts</h2>
+		
 	  {% for post in site.posts %}
-
-		  <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-		  <div class="entry">
-			{{ post.excerpt }}
-		  </div>
-
-		  <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+	  
+			<section class="news">                        
+				<div class="news-date">
+					<span class="news-date-weekday">{{ page.date | date: "%A" }}</span>
+					<span class="news-date-day">{{ page.date | date: "%-d" }}</span>
+					<span class="news-date-month">{{ page.date | date: "%b" }}</span>
+					<span class="news-date-year">{{ page.date | date: "%Y" }}</span>
+				</div>
+				<div class="news-content">
+					<div class="news-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>/div>
+					<p>{{ post.excerpt }}</p>
+					<a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+				</div>
+			</section>   		
+			
 	  {% endfor %}
+	  
 	</article>
+	<!--
 	<aside id="main-aside">
 		<div id="current-info" class="menu" title="Posts">
 		  <ul>
@@ -32,13 +45,7 @@ permalink: /es/blog
 		  {% endfor %}
 		  </ul>
 		</div>
-		<div class="menu" title="Descargas">
-			<ul>
-				<li><a href="../docs/GQG[Esp-CV].pdf"><span class="pdf-doc-icon">[Espa&ntilde;ol] CV PDF</span></a></li>
-				<li><a href="../docs/GQG[Esp-CV].doc"><span class="word-doc-icon">[Espa&ntilde;ol] CV Word</span></a></li>
-				<li><a href="../docs/GQG[Eng-CV].pdf"><span class="pdf-doc-icon">[Ingl&eacute;s] CV PDF</span></a></li>
-				<li><a href="../docs/GQG[Eng-CV].doc"><span class="word-doc-icon">[Ingl&eacute;s] CV Word</span></a></li>
-			</ul>
-		</div>
 	</aside>
+	
+	-->
 </div> <!-- #main -->

@@ -1,6 +1,6 @@
 ---
 layout: default_es
-permalink: /es/blog
+permalink: /en/blog
 ---
 
 <div>
@@ -15,48 +15,15 @@ permalink: /es/blog
 <div class="main wrapper clearfix"> 
 	<article>  
 		<h1 class="article-image news-icon">Blog</h1>      
-		<h2>&Uacute;ltimos posts</h2>
+		<h2>Latest posts</h2>
 		
 	  {% for post in site.posts %}
 	  
 			<section class="news">                        
-				<div class="news-date">					
-					
-					<span class="news-date-weekday">
-					{% assign dy = post.date | date: "%a" %}
-					{% case dy %}
-					  {% when "Mon" %}Lunes
-					  {% when "Tue" %}Martes
-					  {% when "Wed" %}Mi&eacute;rcoles
-					  {% when "Thu" %}Jueves
-					  {% when "Fri" %}Viernes
-					  {% when "Sat" %}S&aacute;bado
-					  {% when "Sun" %}Domingo
-					{% endcase %}
-					</span>
-					
+				<div class="news-date">
+					<span class="news-date-weekday">{{ post.date | date: "%A" }}</span>
 					<span class="news-date-day">{{ post.date | date: "%-d" }}</span>
-					
-					<span class="news-date-month">
-					{% assign m = post.date | date: "%-m" %}
-					{{ post.date | date: "%-d" }}
-					{% case m %}
-					  {% when '1' %}Enero
-					  {% when '2' %}Febrero
-					  {% when '3' %}Marzo
-					  {% when '4' %}Abril
-					  {% when '5' %}Mayo
-					  {% when '6' %}Junio
-					  {% when '7' %}Julio
-					  {% when '8' %}Agosto
-					  {% when '9' %}Septiembre
-					  {% when '10' %}Octubre
-					  {% when '11' %}Noviembre
-					  {% when '12' %}Diciembre
-					{% endcase %}
-					{{ post.date | date: "%Y" }}
-					</span>
-					
+					<span class="news-date-month">{{ post.date | date: "%b" }}</span>
 					<span class="news-date-year">{{ post.date | date: "%Y" }}</span>
 				</div>
 				<div class="news-content">

@@ -2,38 +2,38 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="es" class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Gustavo Quevedo Garr&aacute;n : : : Sitio Web profesional</title>
+        <title>Gustavo Quevedo Garr&aacute;n : : : Professional website</title>
         <meta name="viewport" content="width=device-width">
 
-        <meta content="Gustavo, Quevedo, Garr&aacute;n, CV, curriculum, resume, programador, desarrollo, developer, ingeniero, desarrollador, NET, framework, C, VB, Sharepoint, software, aplicaciones, inform&aacute;tica" name="keywords"/>
-        <meta content="Perfil profesional de Gustavo Quevedo Garr&aacute;n, consultor en Incentro (Santander). Ingeniero inform&aacute;tico, arquitecto, dise&ntilde;ador y desarrollador de software." name="description"/>
+        <meta content="Gustavo, Quevedo, Garr&aacute;n, CV, curriculum, resume, programmer, development, developer, engineer, NET, framework, C, VB, Sharepoint, software, applications, computers" name="keywords"/>
+        <meta content="Professional profile of Gustavo Quevedo Garr&aacute;n, consultant at Incentro Spain (Santander). Computer engineer, architect, designer and software developer." name="description"/>
         <meta content="Dise&ntilde;o, www.gustavoquevedo.com" name="author"/>
-        <meta content="http://www.gustavoquevedo.com" name="identifier" scheme="URI"/>
+        <meta content="http://www.gustavoquevedo.com" name="Identifier" scheme="URI"/>
         <meta content="http://www.gustavoquevedo.com" name="publisher"/>
         <meta content="Gustavo Quevedo Garr&aacute;n" name="creator"/>
         <meta content="Espa&ntilde;a" name="Coverage.jurisdiction"/>
-        <meta content="Espa&ntilde;a, programador, software, inform&aacute;tica" name="page-topic"/>
+        <meta content="Espa&ntilde;a, programmer, developer, software, computers" name="page-topic"/>
         <meta content="All" name="audience"/>
         <meta content="General" name="Rating"/>
-        <meta content="Global" name="Distribution"/>
+        <meta content="Global" name="distribution"/>
         <meta content="Document" name="ObjectType"/>
         <meta content="index follow" name="googlebot"/>
         <meta content="index,follow,all" name="robots"/>
         <meta content="7 Days" name="revisit-after"/>
         <meta content="7 days" name="revisit"/>
-        <meta name="language" content="spanish">
+        <meta name="language" content="english">
 
         <link rel="stylesheet" href="../css/normalize.min.css">
         <link rel="stylesheet" href="../css/main.css">
         <link rel="stylesheet" href="../css/custom-theme/jquery-ui-1.9.0.custom.css">
         <link rel="stylesheet" href="../css/author.css">
-		
-		<link rel="stylesheet" type="text/css" href="../css/highlights.css" />
 
+		<link rel="stylesheet" type="text/css" href="../css/highlights.css" />
+		
         <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
         <link rel="icon" type="image/x-icon" href="../favicon.ico" />
 
@@ -91,12 +91,13 @@
                 </div>
                 <nav id="main-nav">
                     <ul>
-                        <li><a class="show-hide-nav"><span class="main-nav-link home-icon">Navegaci&oacute;n</span></a></li>
-                        <li><a class="selected" href="index.html"><span class="main-nav-link home-icon">Inicio</span></a></li>
-                        <li><a href="blog"><span class="main-nav-link news-icon">Blog</span></a></li>
-                        <li><a href="skills.html"><span class="main-nav-link skills-icon">Perfil</span></a></li>
-                        <li><a href="cv.html"><span class="main-nav-link cv-icon">C. V.</span></a></li>
-                        <li><a href="contact.html"><span class="main-nav-link contact-icon">Contacto</span></a></li>
+						{% assign current = page.url | downcase | split: '/' %}
+                        <li><a class="show-hide-nav"><span class="main-nav-link home-icon">Browsing</span></a></li>
+                        <li><a {% if current[2] == 'index.html' %}class="selected"{% endif %} href="index.html"><span class="main-nav-link home-icon">Home</span></a></li>
+                        <li><a {% if current[2] == 'blog' %}class="selected"{% endif %} href="blog"><span class="main-nav-link news-icon">Blog</span></a></li>
+                        <li><a {% if current[2] == 'skills.html' %}class="selected"{% endif %} href="skills.html"><span class="main-nav-link skills-icon">Skills</span></a></li>
+                        <li><a {% if current[2] == 'cv.html' %}class="selected"{% endif %} href="cv.html"><span class="main-nav-link cv-icon">C. V.</span></a></li>
+                        <li><a {% if current[2] == 'contact.html' %}class="selected"{% endif %} href="contact.html"><span class="main-nav-link contact-icon">Contact</span></a></li>
                     </ul>
                 </nav>
             </header>
@@ -110,11 +111,11 @@
             <footer class="wrapper">
                 <strong>Gustavo Quevedo Garr&aacute;n &copy; 2014</strong>
                 <ul id="footer-nav">
-                    <li><a class="selected" href="index.html">Inicio</a></li>
-                    <li><a href="blog">Blog</a></li>
-                    <li><a href="skills.html">Perfil</a></li>
-                    <li><a href="cv.html">C. V.</a></li>
-                    <li><a href="contact.html">Contacto</a></li>
+                    <li><a {% if current[2] == 'index.html' %}class="selected"{% endif %} href="index.html">Home</a></li>
+                    <li><a {% if current[2] == 'blog' %}class="selected"{% endif %} href="blog">Blog</a></li>
+                    <li><a {% if current[2] == 'skills.html' %}class="selected"{% endif %} href="skills.html">Skills</a></li>
+                    <li><a {% if current[2] == 'cv.html' %}class="selected"{% endif %} href="cv.html">C. V.</a></li>
+                    <li><a {% if current[2] == 'contact.html' %}class="selected"{% endif %} href="contact.html">Contact</a></li>
                 </ul>
             </footer>
         </div>
@@ -124,6 +125,5 @@
 
         <script src="../js/plugins.js"></script>
         <script src="../js/main.js"></script>
-
     </body>
 </html>

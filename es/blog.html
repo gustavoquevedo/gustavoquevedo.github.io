@@ -39,7 +39,6 @@ permalink: /es/blog
 					
 					<span class="news-date-month">
 					{% assign m = post.date | date: "%-m" %}
-					{{ post.date | date: "%-d" }}
 					{% case m %}
 					  {% when '1' %}Enero
 					  {% when '2' %}Febrero
@@ -54,7 +53,6 @@ permalink: /es/blog
 					  {% when '11' %}Noviembre
 					  {% when '12' %}Diciembre
 					{% endcase %}
-					{{ post.date | date: "%Y" }}
 					</span>
 					
 					<span class="news-date-year">{{ post.date | date: "%Y" }}</span>

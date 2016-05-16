@@ -92,6 +92,7 @@
                 <nav id="main-nav">
                     <ul>
 						{% assign current = page.url | downcase | split: '/' %}
+						<!--{{ current[0] }}{{ current[1] }}{{ current[2] }}-->
                         <li><a class="show-hide-nav"><span class="main-nav-link home-icon">Browsing</span></a></li>
                         <li><a {% if current[2] == 'index.html' %}class="selected"{% endif %} href="index.html"><span class="main-nav-link home-icon">Home</span></a></li>
                         <li><a {% if current[2] == 'blog' %}class="selected"{% endif %} href="blog"><span class="main-nav-link news-icon">Blog</span></a></li>

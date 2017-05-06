@@ -1,42 +1,377 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html  lang="en" class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Gustavo Quevedo : : : Professional website</title>
-        <meta name="viewport" content="width=device-width">
+<html>
+	<head>
+		<title>Gustavo Quevedo :: Professional &amp; Personal Website</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 
-        <meta content="Gustavo, Quevedo, Garr&aacute;n, CV, curriculum, resume, programmer, development, developer, engineer, NET, framework, C, VB, Sharepoint, software, applications, computers" name="keywords"/>
-        <meta content="Professional profile of Gustavo Quevedo, Web Consultant at Incentro (Santander, Spain). Computer engineer and Software architect, designer and developer." name="description"/>
-        <meta content="Dise&ntilde;o, www.gustavoquevedo.com" name="author"/>
-        <meta content="http://www.gustavoquevedo.com" name="Identifier" scheme="URI"/>
-        <meta content="http://www.gustavoquevedo.com" name="publisher"/>
-        <meta content="Gustavo Quevedo Garr&aacute;n" name="creator"/>
-        <meta content="Espa&ntilde;a" name="Coverage.jurisdiction"/>
-        <meta content="Espa&ntilde;a, programador, software, inform&aacute;tica" name="page-topic"/>
-        <meta content="All" name="audience"/>
-        <meta content="General" name="Rating"/>
-        <meta content="Global" name="Distribution"/>
-        <meta content="Document" name="ObjectType"/>
-        <meta content="index follow" name="googlebot"/>
-        <meta content="index,follow,all" name="robots"/>
-        <meta content="7 Days" name="revisit-after"/>
-        <meta content="7 days" name="revisit"/>
-		<script src="js/jquery-1.8.2.js"></script>
-		<script src="js/jquery.browserLanguage.js"></script>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-36792204-2', 'auto');
+          ga('send', 'pageview');
+
+        </script>
 	</head>
 	<body>
-		<script>
-		    $.browserLanguage(function( language , acceptHeader ){
-		    	var relativeUrl = "en/index.html";
-			    if(acceptHeader.substring(0,2) == "es"){
-			    	relativeUrl = "es/index.html";
-			    }
-		    	window.location = relativeUrl;
-		    });
-		</script>
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header -->
+			<header id="header" class="alt">
+					<h1>Gustavo Quevedo</h1>
+				<div class="spotlight">
+					<span class="image"><img src="images/profile.jpg" alt="" /></span>
+					<p>A self-motivated and energetic Spanish <b>software</b> <br />
+						<b>engineer</b> currently working and livin' la vida loca in <b>Dublin</b>.</p>
+				</div>
+			</header>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li><a href="#intro" class="active">Intro</a></li>
+					<li><a href="#linkedin">Professional</a></li>
+					<li><a href="#wordpress">Blog</a></li>
+					<li><a href="#github">Projects</a></li>
+					<li><a href="#instagram">Pictures</a></li>
+					<li><a href="#twitter">Tweets</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+
+			<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+				<section id="intro" class="main special">
+					<header class="major">
+						<h2><span class="icon alt fa-smile-o"></span>Welcome!</h2>
+						<p>Welcome to my website, where you'll find information and updates about my me :-)</p>
+					</header>
+					<ul class="features">
+						<li>
+							<span class="icon major style1 fa-laptop"></span>
+							<h3>Professional</h3>
+							<p><a href="#linkedin">I work as a software engineer</a> but I also try to find time to develop <a href="#github">personal projects</a> and write some <a href="#wordpress">blog posts</a>.</p>
+						</li>
+						<li>
+							<span class="icon major style3 fa-coffee"></span>
+							<h3>Personal</h3>
+							<p>There is more to life than work so you'll also find here <a href="#instagram">pictures</a>, <a href="#twitter">reflections and links</a> I'd like to share with you!</p>
+						</li>
+						<li>
+							<span class="icon major style5 fa-envelope"></span>
+							<h3>Contact</h3>
+							<p>Here you'll find multiple ways to contact me. What are you waiting to <a href="#contact">send me a message or follow me</a>? :-)</p>
+						</li>
+					</ul>
+				</section>
+
+				<!-- linkedin -->
+				<section id="linkedin" class="main">
+					<header class="major">
+						<h2><span class="icon alt fa-linkedin"></span>Professional profile</h2>
+						<script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+						<script type="IN/MemberProfile" data-id="https://www.linkedin.com/in/gquevedo" data-format="inline" data-related="false"></script>
+						
+						<footer class="major">
+							<ul class="actions">
+								<li><a href="/assets/docs/GQG[Eng-CV].pdf" target="_blank" class="button special icon fa-file-text-o">Download CV<span class="icon fa-download"></span></a></li>
+							</ul>
+						</footer>
+					</header>
+					<section id="summary">
+						<h3>Summary</h3>
+					</section>
+					<hr>
+					<section id="current-position">
+						<h3>Current Position</h3>									
+					</section>
+					<footer class="major">
+						<ul class="actions">
+							<li><a href="https://www.linkedin.com/in/gquevedo/" target="_blank" class="button special icon fa-linkedin">My LinkedIn profile<span class="icon fa-external-link"></span></a></li>
+						</ul>
+					</footer>
+				</section>
+
+				<!-- wordpress -->
+				<section id="wordpress" class="main">
+					<header class="major">
+						<h2><span class="icon alt fa-wordpress"></span>Trying to help others</h2>
+						<p>
+							My daily work and personal projects require facing multiple tasks and issues.<br/>
+							I believe the solutions I find can become something useful for others so I write some blog posts.
+						</p>
+					</header>
+					<section id="wordpress-posts">
+						<h3>Recent posts</h3>
+						
+					</section>
+					<footer class="major">
+						<ul class="actions">
+							<li><a href="https://gusdev.wordpress.com/" target="_blank" class="button special icon fa-wordpress">My blog<span class="icon fa-external-link"></span></a></li>
+						</ul>
+					</footer>
+				</section>
+				
+				<!-- github -->
+				<section id="github" class="main">
+					<header class="major">
+						<h2><span class="icon alt fa-github"></span>Personal projects</h2>
+						<p>
+							Coding and software development are, in addition to my work, something I love.<br/>
+							Check out some of the projects I've been working on in my spare time.
+						</p>
+					</header>
+					<section id="github-repos">
+						<h3>Github repositories</h3>
+						<div class="table-wrapper">
+								<table>
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th class="hide-small">Description</th>
+											<th>Website</th>
+											<th class="hide-small">Created</th>
+											<th class="hide-xsmall">Updated</th>
+											<th class="hide-small">Fork?</th>
+										</tr>
+									</thead>
+									<tbody>
+									</tbody>
+								</table>
+							</div>
+						
+					</section>
+					<footer class="major">
+						<ul class="actions">
+							<li><a href="https://github.com/gustavoquevedo" target="_blank" class="button special icon fa-github">My Github page<span class="icon fa-external-link"></span></a></li>
+						</ul>
+					</footer>
+				</section>
+				
+				<!-- instagram -->
+				<section id="instagram" class="main">
+					<header class="major">
+						<h2><span class="icon alt fa-instagram"></span>A bit of fun</h2>
+						<p>
+							Find below some pictures... because there is more to life than work!<br/>
+							Most of them are taken in Dublin, the wonderful city where I live.
+						</p>
+					</header>
+					<section id="instagram-pictures">
+						<h3>Last published pictures</h3>
+						<div class="box alt">
+							<div class="row uniform">
+								<div class="4u 6u(small) 12u$(xsmall)">
+									<span id="pic1" class="image fit image-wrapper">
+										<div class="instagram-image"><img src="images/pic01.jpg" /></div>
+										<span class="instagram-logo"><span class="icon-instagram icon-instagram-feed"></span>guskeikov</span>
+										<span class="instagram-likes"><span class="icon-instagram icon-heart"></span></span>
+										<span class="instagram-comments"><span class="icon-instagram icon-comments"></span></span>
+									</span>
+								</div>
+								<div class="4u 6u$(small) 12u$(xsmall)">
+									<span id="pic2" class="image fit image-wrapper">
+										<div class="instagram-image"><img src="images/pic02.jpg" /></div>
+										<span class="instagram-logo"><span class="icon-instagram icon-instagram-feed"></span>guskeikov</span>
+										<span class="instagram-likes"><span class="icon-instagram icon-heart"></span></span>
+										<span class="instagram-comments"><span class="icon-instagram icon-comments"></span></span>
+									</span>
+								</div>
+								<div class="4u$ 6u(small) 12u$(xsmall)">
+									<span id="pic3" class="image fit image-wrapper">
+										<div class="instagram-image"><img src="images/pic03.jpg" /></div>
+										<span class="instagram-logo"><span class="icon-instagram icon-instagram-feed"></span>guskeikov</span>
+										<span class="instagram-likes"><span class="icon-instagram icon-heart"></span></span>
+										<span class="instagram-comments"><span class="icon-instagram icon-comments"></span></span>
+									</span>
+								</div>
+								<div class="4u 6u$(small) 12u$(xsmall)">
+									<span id="pic4" class="image fit image-wrapper">
+										<div class="instagram-image"><img src="images/pic03.jpg" /></div>
+										<span class="instagram-logo"><span class="icon-instagram icon-instagram-feed"></span>guskeikov</span>
+										<span class="instagram-likes"><span class="icon-instagram icon-heart"></span></span>
+										<span class="instagram-comments"><span class="icon-instagram icon-comments"></span></span>
+									</span>
+								</div>
+								<div class="4u 6u(small) 12u$(xsmall)">
+									<span id="pic5" class="image fit image-wrapper">
+										<div class="instagram-image"><img src="images/pic02.jpg" /></div>
+										<span class="instagram-logo"><span class="icon-instagram icon-instagram-feed"></span>guskeikov</span>
+										<span class="instagram-likes"><span class="icon-instagram icon-heart"></span></span>
+										<span class="instagram-comments"><span class="icon-instagram icon-comments"></span></span>
+									</span>
+								</div>
+								<div class="4u$ 6u$(small) 12u$(xsmall)">
+									<span id="pic6" class="image fit image-wrapper">
+										<div class="instagram-image"><img src="images/pic01.jpg" /></div>
+										<span class="instagram-logo"><span class="icon-instagram icon-instagram-feed"></span>guskeikov</span>
+										<span class="instagram-likes"><span class="icon-instagram icon-heart"></span></span>
+										<span class="instagram-comments"><span class="icon-instagram icon-comments"></span></span>
+									</span>
+								</div>
+								<div class="4u 6u(small) 12u$(xsmall) hide-xsmall">
+									<span id="pic7" class="image fit image-wrapper">
+										<div class="instagram-image"><img src="images/pic01.jpg" /></div>
+										<span class="instagram-logo"><span class="icon-instagram icon-instagram-feed"></span>guskeikov</span>
+										<span class="instagram-likes"><span class="icon-instagram icon-heart"></span></span>
+										<span class="instagram-comments"><span class="icon-instagram icon-comments"></span></span>
+									</span>
+								</div>
+								<div class="4u 6u$(small) 12u$(xsmall) hide-xsmall">
+									<span id="pic8" class="image fit image-wrapper">
+										<div class="instagram-image"><img src="images/pic02.jpg" /></div>
+										<span class="instagram-logo"><span class="icon-instagram icon-instagram-feed"></span>guskeikov</span>
+										<span class="instagram-likes"><span class="icon-instagram icon-heart"></span></span>
+										<span class="instagram-comments"><span class="icon-instagram icon-comments"></span></span>
+									</span>
+								</div>
+								<div class="4u$ 6u(small) 12u$(xsmall) hide-xsmall">
+									<span id="pic9" class="image fit image-wrapper">
+										<div class="instagram-image"><img src="images/pic03.jpg" /></div>
+										<span class="instagram-logo"><span class="icon-instagram icon-instagram-feed"></span>guskeikov</span>
+										<span class="instagram-likes"><span class="icon-instagram icon-heart"></span></span>
+										<span class="instagram-comments"><span class="icon-instagram icon-comments"></span></span>
+									</span>
+								</div>
+								<div class="4u 6u$(small) 12u$(xsmall) hide-xsmall">
+									<span id="pic10" class="image fit image-wrapper">
+										<div class="instagram-image"><img src="images/pic03.jpg" /></div>
+										<span class="instagram-logo"><span class="icon-instagram icon-instagram-feed"></span>guskeikov</span>
+										<span class="instagram-likes"><span class="icon-instagram icon-heart"></span></span>
+										<span class="instagram-comments"><span class="icon-instagram icon-comments"></span></span>
+									</span>
+								</div>
+								<div class="4u 6u(small) 12u$(xsmall) hide-xsmall">
+									<span id="pic11" class="image fit image-wrapper">
+										<div class="instagram-image"><img src="images/pic03.jpg" /></div>
+										<span class="instagram-logo"><span class="icon-instagram icon-instagram-feed"></span>guskeikov</span>
+										<span class="instagram-likes"><span class="icon-instagram icon-heart"></span></span>
+										<span class="instagram-comments"><span class="icon-instagram icon-comments"></span></span>
+									</span>
+								</div>
+								<div class="4u$ 6u$(small) 12u$(xsmall) hide-xsmall">
+									<span id="pic12" class="image fit image-wrapper">
+										<div class="instagram-image"><img src="images/pic03.jpg" /></div>
+										<span class="instagram-logo"><span class="icon-instagram icon-instagram-feed"></span>guskeikov</span>
+										<span class="instagram-likes"><span class="icon-instagram icon-heart"></span></span>
+										<span class="instagram-comments"><span class="icon-instagram icon-comments"></span></span>
+									</span>
+								</div>
+							</div>
+						</div>
+					</section>
+					<footer class="major">
+						<ul class="actions">
+							<li><a href="http://instagram.com/guskeikov" target="_blank" class="button special icon fa-instagram">My Instagram profile<span class="icon fa-external-link"></span></a></li>
+						</ul>
+					</footer>
+				</section>
+
+				<!-- twitter -->
+				<section id="twitter" class="main">
+					<header class="major">
+						<h2><span class="icon alt fa-twitter"></span>Spreading the word</h2>
+						<p>Reflections, reactions, facts, questions or whatever that comes to my mind</p>
+					</header>
+					<section>
+						<h3>Last tweets</h3>
+						<a class="twitter-timeline" data-chrome="noheader" href="https://twitter.com/guskeikov">Tweets</a> 
+						<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>									
+					</section>
+					<footer class="major">
+						<ul class="actions">
+							<li><a href="http://twitter.com/guskeikov" target="_blank" class="button special icon fa-twitter">My Twitter<span class="icon fa-external-link"></span></a></li>
+						</ul>
+					</footer>
+				</section>
+
+				<!-- statistics -->
+				<section id="statistics" class="main special">
+					<header class="major">
+						<h2>Some statistics</h2>
+					</header>
+					<ul class="statistics">
+						<li class="style1">
+							<span class="icon fa-comment"></span>
+							<strong id="wordpress-amount"></strong> Blog posts
+						</li>
+						<li class="style2">
+							<span class="icon fa-code-fork"></span>
+							<strong id="github-amount"></strong> Github repos
+						</li>
+						<li class="style3">
+							<span class="icon fa-photo"></span>
+							<strong id="instagram-amount"></strong> Instagram posts
+						</li>
+					</ul>
+				</section>
+
+				<!-- contact -->
+				<section id="contact" class="main">
+					<header class="major">
+						<h2><span class="icon alt fa-envelope"></span>Hey! I'm a real person!</h2>
+						<p>
+							Please use the contact form below to send me any information. <br />
+							Feel free to enter any questions or comments.
+						</p>
+					</header>
+					<form method="post" action="https://formspree.io/gusk82@gmail.com">
+						<input type="hidden" name="_next" value="http://gustavoquevedo.com#contact.html?success=1"/>
+						<input type="hidden" name="_subject" value="New message sent from gustavoquevedo.com" />
+						<div class="row uniform">
+							<div class="6u 12u$(xsmall)">
+								<input type="text" name="name" id="name" required placeholder="Name" />
+							</div>
+							<div class="6u$ 12u$(xsmall)">
+								<input type="email" name="email" id="email" required placeholder="Email" />
+							</div>
+							<div class="12u$">
+								<textarea name="message" id="message" required placeholder="Enter your message" rows="6"></textarea>
+							</div>
+							<div class="12u$">
+								<ul class="actions align-center">
+									<li><input type="submit" value="Send Message" class="special" /></li>
+									<li><input type="reset" value="Reset" /></li>
+								</ul>
+							</div>
+						</div>
+					</form>
+				</section>
+			</div>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="http://gusdev.wordpress.com" class="icon fa-wordpress alt" target="_blank"><span class="label">Blog</span></a></li>
+					<li><a href="https://www.linkedin.com/in/gquevedo" class="icon fa-linkedin alt" target="_blank"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://github.com/gustavoquevedo" class="icon fa-github alt" target="_blank"><span class="label">GitHub</span></a></li>
+					<li><a href="https://instagram.com/guskeikov" class="icon fa-instagram alt" target="_blank"><span class="label">Instagram</span></a></li>
+					<li><a href="https://twitter.com/guskeikov" class="icon fa-twitter alt" target="_blank"><span class="label">Twitter</span></a></li>
+				</ul>
+				<p class="copyright">&copy; 2017 Gustavo Quevedo. Original design by <a href="https://html5up.net">HTML5 UP</a>.</p>
+			</footer>
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/custom.js"></script>
 	</body>
 </html>

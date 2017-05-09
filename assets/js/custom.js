@@ -27,12 +27,6 @@
 			}
 
 			function apiCall(elementID, url){
-				// lang = (typeof lang !== 'undefined') ?  lang : "en-US";				
-				// $.ajaxSetup({
-				// 	headers: { 'Accept-Language': lang }
-				// });
-				//http://stackoverflow.com/questions/3350778/modify-http-headers-for-a-jsonp-request
-				//https://www.npmjs.com/package/linkedin-public-profile-parser
 
 				$.ajax({
 					url: url,
@@ -43,9 +37,6 @@
 					},
 					dataType: 'jsonp',
 					success: function(jsonpData) {
-						// var data = prepareData(elementID, jsonpData);
-						// setTemplate(elementID, data);
-
                         switch(elementID){
                             case "linkedin":
                                 return setLinkedinData(jsonpData);

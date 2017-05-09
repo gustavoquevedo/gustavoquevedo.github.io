@@ -64,7 +64,7 @@
 			}
 
 			//API calls
-			var linkedinApiUrl = "https://api.linkedin.com/v1/people/~:(headline,positions,summary)?oauth2_access_token=AQWcqp3LBEemPi2O6C78rO7ZL6As3qSdcV7X-gkjImM9giLTozo9Qbl5Ren9UfTQ7M4wg6VEELT3nXR7_U7-HwCR5kcaPzjI1t1qlNp1NqAGn8GVT5tNF_ZsNfDjFK7G1mX7jGt8OojwQgjFT3LhcnA5As5pNmXCZSDp_n2HJSceUj4QDgM&format=jsonp";
+			var linkedinApiUrl = "https://api.linkedin.com/v1/people/~:(headline,positions,summary)?oauth2_access_token=xxxxxxxxxxxxxxxxxxx&format=jsonp";
 			var instagramApiUrl = "https://api.instagram.com/v1/users/self/media/recent/?access_token=190237791.1677ed0.38d4c12947954ef8a14f49be64f87079";
 			var githubApiUrl = "https://ap" + "i.github.co" + "m/user/repos?acces" + "s_token=8132bc9f99e9e488ea40efa" + "6ca8476b775337772";
 			var wordpressApiUrl = "https://public-api.wordpress.com/rest/v1.1/sites/gusdev.wordpress.com/posts/?fields=title,URL,date,excerpt";

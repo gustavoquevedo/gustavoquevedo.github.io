@@ -69,20 +69,10 @@
 			var githubApiUrl = "https://ap" + "i.github.co" + "m/user/repos?acces" + "s_token=8132bc9f99e9e488ea40efa" + "6ca8476b775337772";
 			var wordpressApiUrl = "https://public-api.wordpress.com/rest/v1.1/sites/gusdev.wordpress.com/posts/?fields=title,URL,date,excerpt";
 
-			//apiCall(linkedinAPI);
-			apiCall('linkedin', linkedinApiUrl);
+			//apiCall('linkedin', linkedinApiUrl);
 			apiCall('instagram', instagramApiUrl);
 			apiCall('github', githubApiUrl);
 			apiCall('wordpress', wordpressApiUrl);
-
-			// function prepareData(elementID, jsonpData){
-			// 	switch(elementID){
-			// 		case "instagram":
-			// 			return getInstagramData(jsonpData);
-			// 		case "github":
-			// 			return getGithubData(jsonpData);
-			// 	}
-			// }
 
 			function setInstagramData(jsonpData){
 				$('#statistics #instagram-amount').html(jsonpData.data.length);

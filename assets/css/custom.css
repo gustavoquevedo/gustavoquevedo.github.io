@@ -1,17 +1,16 @@
 /* common */
 
-#footer .icons {
-    width: 100%;
-    text-align: center;
-    margin: 0;
-}
-
 h2 {
     font-weight: 500;
 }
 
 h3 {
     font-weight: 500;
+}
+
+/* disable animation on loading for header */
+body.is-loading #header.alt > * {
+    opacity: 1 !important;
 }
 
 .spotlight .image {
@@ -38,6 +37,12 @@ header.major h2 .icon.alt{
     margin-right: 0.5em;
 }
 
+#footer .icons {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+
 .button.icon:before {
     margin-right: 1.5em;
 }
@@ -62,6 +67,10 @@ header.major h2 .icon.alt{
 @media screen and (max-width: 736px) {
     .hide-small {
         display: none;
+    }
+
+    .spotlight .image img {
+        height: 12em;
     }
 
     footer.major {

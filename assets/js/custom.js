@@ -26,15 +26,19 @@
 				return monthNames[index];
 			}
 
+			function dateToDMY(date) {
+				var d = date.getDate();
+				var m = date.getMonth() + 1;
+				var y = date.getFullYear();
+				return '' + (d <= 9 ? '0' + d : d) + '/' + (m<=9 ? '0' + m : m) + '/'  + y;
+			}
+
 			function apiCall(elementID, url){
 
 				$.ajax({
 					url: url,
 					type: "GET",
 					contentType: "application/json",
-					headers: {
-						"Accept-Language":"en-US"
-					},
 					dataType: 'jsonp',
 					success: function(jsonpData) {
                         switch(elementID){
@@ -115,8 +119,8 @@
 							'<td><a href="' + repos[i].homepage + '" target="_blank">Link</a></td>' :
 							'<td>&nbsp;</td>'
 					)
-					$('#' + repoID).append('<td class="hide-small">' + new Date(repos[i].created_at).toLocaleDateString() + '</td>');
-					$('#' + repoID).append('<td class="hide-xsmall">' + new Date(repos[i].updated_at).toLocaleDateString() + '</td>');
+					$('#' + repoID).append('<td class="hide-small">' + dateToDMY(new Date(repos[i].created_at)) + '</td>');
+					$('#' + repoID).append('<td class="hide-xsmall">' + dateToDMY(new Date(repos[i].updated_at)) + '</td>');
 					$('#' + repoID).append('<td class="hide-small">' + (repos[i].fork ? '&#10003;' : '&nbsp;') + '</td>');
 				}
 			}
@@ -124,97 +128,13 @@
 			function setWordpressData(jsonpData){
 				$('#statistics #wordpress-amount').html(jsonpData.found);
 				var post;
-				for(var i = 0; i < Math.max(5, jsonpData.found); i++){
+				for(var i = 0; i < Math.min(5, jsonpData.found); i++){
 					post = jsonpData.posts[i];
-					$('#wordpress-posts').append('<h4>' + new Date(post.date).toLocaleDateString() + 
+					$('#wordpress-posts').append('<h4>' + dateToDMY(new Date(post.date)) + 
 						' : <strong><a href="' + post.URL + '" target="_blank">' + post.title + '</a></strong></h4>');
 					$('#wordpress-posts').append('<blockquote>' + post.excerpt + '</blockquote>');
 				}
 			}
-
-			// function setTemplate(elementID, data){
-			// 	var selector = '#' + elementID;
-			// 	var template = $(selector).html();
-			// 	Mustache.parse(template);   // optional, speeds up future uses
-			// 	var rendered = Mustache.render(template, data);
-			// 	$(selector).html(rendered);
-			// }
-
-			// //mustache: parse templates
-			// var data = {
-			// 	name: "Sumy"
-			// }
-
-			// setTemplate('intro', data);
-
-
-
-
-			
-			var instagramParsedData = {
-				
-			}
-			
-			// setTemplate('instagram', instagramParsedData);
-
-
-// 			var myData;
-			
-			
-// 			$.ajax({
-// 				url: linkedinAPI,
-// 				type: 'GET',
-// 				contentType: "application/json",
-// 				dataType: 'json',
-// 				success: function(data) {
-// 					console.log('Data: ' + data);
-// 				},
-// 				error: function() {
-// 					console.log('Failed!');
-// 				},
-// 			});
-// 						$.getJSON( linkedinAPI,{format: "jsonp"}, function() {
-// 				console.log( "success" );
-// 				})
-// 				.done(function( json ) {
-// 					console.log( "JSON Data: " + json );
-// 				})
-// 				.fail(function( jqxhr, textStatus, error ) {
-// 					var err = textStatus + ", " + error;
-// 					console.log( "Request Failed: " + err );
-// 			});
-
-
-
-//   $.getJSON( flickerAPI, {
-//     tags: "mount rainier",
-//     tagmode: "any",
-//     format: "json"
-//   })
-//     .done(function( data ) {
-//       $.each( data.items, function( i, item ) {
-//         $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
-//         if ( i === 3 ) {
-//           return false;
-//         }
-//       });
-//     });
-
-
-
-// $.ajax({
-//   url: linkedinAPI,
-//   type: 'GET',
-//   contentType: "application/json",
-//   dataType: 'jsonp',
-//   success: function(data) {
-//     console.log('Count: ' + data.count);
-//   },
-//   error: function() {
-//     console.log('Failed!');
-//   },
-// });
-
 
 	});
 

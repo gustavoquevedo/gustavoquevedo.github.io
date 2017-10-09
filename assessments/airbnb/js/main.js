@@ -108,7 +108,7 @@ function loadSettings(){
 
         $.ajax({
             type: "GET",
-            url: "/settings/" + settingsFileName,
+            url: "settings/" + settingsFileName,
             dataType: "json",
             success: function(json) { settings = json; },
             async: false
@@ -118,7 +118,7 @@ function loadSettings(){
     if(!settings){     
         $.ajax({
             type: "GET",
-            url: "/settings/" + defaultSettingsFileName,
+            url: "settings/" + defaultSettingsFileName,
             dataType: "json",
             success: function(json) { settings = json; },
             async: false

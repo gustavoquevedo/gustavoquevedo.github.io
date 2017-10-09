@@ -1,0 +1,88 @@
+body {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 11pt;
+    padding: 30px 70px;
+}
+
+a, a:visited{
+   color: #008489;
+   text-decoration: none;
+}
+
+a:hover{
+   text-decoration: underline;
+}
+
+#data tbody .fa-check{
+    color: #666;
+}
+
+#data tbody .fa-times{
+    color: #ccc;
+}
+
+#data td{
+    text-align: center;
+}
+
+#data td.actions a{
+    visibility: collapse;
+}
+
+#data tr:hover td.actions a{
+    visibility: visible;
+}
+
+#data .spinner{
+    display:none;
+}
+
+#data tr.disabled td, 
+.null-value{
+    opacity: 0.4;
+}
+
+#data tr.disabled td a {    
+    opacity: 0.6;
+}
+
+.success-msg, .success-msg i{
+    color: green !important;
+}
+.error-msg, .error-msg i{
+    color: red !important;
+}
+
+@media (max-width: 767px) {
+  .hidden-s,
+  tr.hidden-s,
+  th.hidden-s,
+  td.hidden-s {
+    display: none !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .hidden-m,
+  tr.hidden-m,
+  th.hidden-m,
+  td.hidden-m {
+    display: none !important;
+  }
+}
+@media (max-width: 1200px) {
+  .hidden-l,
+  tr.hidden-l,
+  th.hidden-l,
+  td.hidden-l {
+    display: none !important;
+  }
+}
+@media (max-width: 1999px) {
+  .hidden-xl,
+  tr.hidden-xl,
+  th.hidden-xl,
+  td.hidden-xl {
+    display: none !important;
+  }
+}

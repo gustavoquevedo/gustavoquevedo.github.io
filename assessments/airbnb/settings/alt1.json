@@ -1,0 +1,45 @@
+{
+    "csvSourceUrl": "http://gustavoquevedo.com/assessments/airbnb/csv/listings.csv",
+    "useSampleResources": false,
+    "trueValueIconCode": "check",
+    "falseValueIconCode": "times",
+    "errorValueIconCode": "exclamation-o",
+    "samples":{
+        "imageUrl": "",
+        "xmlUrl": "",
+        "listingId": ""
+    },
+    "columns": {
+        "selectFilter": ["country_code", "host_id", "approval_status"],
+        "boolean": ["airbnb_sync_status", "airbnb_sync_freq", "is_enabled", "is_registered_with_api", "are_availabilities_enabled"],
+        "date": ["created_at", "updated_at"],
+        "image": ["first_image_url"],
+        "content" : ["file_name", "airbnb_listing_id"],
+        "hiddenXl": [],
+        "hiddenL": [],
+        "hiddenM": [],
+        "hiddenS": [],
+        "disabledSorting": [],
+        "icons": [
+            ["house_code", "barcode"],
+            ["country_code", "flag"],
+            ["airbnb_listing_id", "address-card-o"],
+            ["airbnb_import_id", "download"],
+            ["airbnb_import_version", "sort-numeric-asc"],
+            ["airbnb_sync_status", "spinner"],
+            ["airbnb_sync_error", "bug"],
+            ["airbnb_sync_freq", "clock-o"],
+            ["host_id", "building-o"],
+            ["is_enabled", "check"],
+            ["file_name", "file-code-o"],
+            ["approval_status", "thumbs-o-up"],
+            ["is_registered_with_api", "plug"],
+            ["are_availabilities_enabled", "check-square-o"],
+            ["first_image_url", "file-image-o"],
+            ["name", "address-card-o"],
+            ["replacement_name", "address-card"]
+        ],
+        "codes": []
+    }
+    
+}

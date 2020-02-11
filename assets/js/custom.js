@@ -66,7 +66,7 @@
 
 			//apiCall('linkedin', linkedinApiUrl);
 			apiCall('instagram', instagramApiUrl);
-			apiCall('github', githubApiUrl);
+			//apiCall('github', githubApiUrl);
 			apiCall('wordpress', wordpressApiUrl);
 
 			function setInstagramData(jsonpData){

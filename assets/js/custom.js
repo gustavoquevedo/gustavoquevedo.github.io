@@ -65,9 +65,9 @@
 			var wordpressApiUrl = "https://public-api.wordpress.com/rest/v1.1/sites/gusdev.wordpress.com/posts/?fields=title,URL,date,excerpt";
 
 			//apiCall('linkedin', linkedinApiUrl);
-			apiCall('instagram', instagramApiUrl);
+			//apiCall('instagram', instagramApiUrl);
 			//apiCall('github', githubApiUrl);
-			apiCall('wordpress', wordpressApiUrl);
+			//apiCall('wordpress', wordpressApiUrl);
 
 			function setInstagramData(jsonpData){
 				$('#statistics #instagram-amount').html(jsonpData.data.length);

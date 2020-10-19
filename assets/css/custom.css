@@ -42,6 +42,13 @@ body.is-loading #header.alt > * {
     text-align: left;
 }
 
+.spotlight .icon {
+    display: inline-block;
+    color: #636363;
+    width: 1.5em;
+    text-align: center;
+}
+
 header.major, footer.major {
     text-align: center;
 } 
